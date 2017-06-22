@@ -13,4 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.min
+//= require bootstrap.min
+//= require jquery.easing.min
+//= require jquery.shuffle.min
+//= require functions
 //= require_tree .
