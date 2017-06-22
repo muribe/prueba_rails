@@ -1,0 +1,60 @@
+<header >
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 bsv">
+                <%= link_to image_tag("bvs1.jpg",class:'img-responsive'), :action => 'batman', :controller => 'pages' %>
+            </div>  
+            <div class="col-sm-6 bsv">                
+            <%= link_to image_tag("bvs2.jpg",class:'img-responsive'), :action => 'superman', :controller => 'pages' %>
+            </div>            
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <%= content_tag(:p, "Cantidad de votos para Batman #{@batman}") %>              
+                <%= form_tag(pages_save_batman_path, method:"post", class: 'form-horizontal') do %>
+                    <div class="form-group">        
+                        <%= label_tag 'name', nil, class: 'control-label col-sm-2' %>
+                        <div class="col-sm-3">            
+                            <%= text_field_tag 'name', nil,class: 'form-control ' %>
+                        </div>
+                    </div>
+                    <div class="form-group">        
+                        <%= label_tag 'email', nil, class: 'control-label col-sm-2' %>
+                        <div class="col-sm-3">            
+                            <%= email_field_tag 'email', nil, class: 'form-control ' %>
+                        </div>
+                    </div>
+                    <div class="form-group"> 
+                        <div class="col-sm-offset-2 col-sm-2">
+                            <%= submit_tag "Vote batman", class:'btn btn-primary' %>
+                        </div>
+                    </div>
+                <% end %> 
+            </div>
+            <div class="col-sm-6">
+                <%= content_tag(:p, "Cantidad de votos para Superman #{@superman}") %>              
+                <%= form_tag(pages_save_superman_path, method:"post", class: 'form-horizontal') do %>
+                    <div class="form-group">        
+                        <%= label_tag 'name', nil, class: 'control-label col-sm-2' %>
+                        <div class="col-sm-3">            
+                            <%= text_field_tag 'name', nil,class: 'form-control ' %>
+                        </div>
+                    </div>
+                    <div class="form-group">        
+                        <%= label_tag 'email', nil, class: 'control-label col-sm-2' %>
+                        <div class="col-sm-3">            
+                            <%= email_field_tag 'email', nil, class: 'form-control ' %>
+                        </div>
+                    </div>
+                    <div class="form-group"> 
+                        <div class="col-sm-offset-2 col-sm-2">
+                            <%= submit_tag "Vote Superman", class:'btn btn-primary' %>
+                        </div>
+                    </div>
+                <% end %>                
+            </div>
+        </div>
+    </div>
+</header>
+
+
